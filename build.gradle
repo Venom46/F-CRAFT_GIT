@@ -1,14 +1,20 @@
-plugins {
-    id 'java'
-}
-
-group 'org.example'
-version '1.0-SNAPSHOT'
-
+apply plugin: 'application'
+sourceSets.main.java.srcDirs = ['src']
+mainClassName = 'driver.Driver'
 repositories {
     mavenCentral()
+    mavenLocal()
 }
-
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.testng:testng:6.14.3'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.6.0'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    compile group: 'com.relevantcodes', name: 'extentreports', version: '2.41.2'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.1.0'
+    compile group: 'com.github.lalyos', name: 'jfiglet', version: '0.0.8'
+    compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.0-M1'
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
 }
