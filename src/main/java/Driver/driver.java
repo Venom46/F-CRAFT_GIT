@@ -4,6 +4,6 @@ import java.awt.*;
 
 public class driver {
 
-    //synchronized;
+
 }
 
